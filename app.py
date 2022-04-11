@@ -125,7 +125,7 @@ def mtb29():
             for d in data:
                 d_str += 'ชื่อ : {}\n'.format(d[0]) + 'ตำแหน่ง : {}\n'.format(d[1]) + 'หน่วย : {}\n'.format(d[2]) + 'เบอร์โทร : {}\n'.format(d[3]) +'-'*50 + '\n'
                 ReplyMessage(Reply_token, d_str, channel_access_token['mtb29'])
-            return request.json, 200
+        return request.json, 200
     elif request.method == 'GET':
         d_str = 'It is GET method'
         return d_str, 200
