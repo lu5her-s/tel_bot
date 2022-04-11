@@ -37,7 +37,10 @@ def get_db(message, table_name):
             if data:
                 return data
             else:
-                return None
+                sql = "SELECT * FROM {} WHERE position like '%{}%'" .format(table_name, w_list[1])
+                c.execute(sql)
+                data = c.fetchall()
+                return data
         except Exception as e:
             print(e)
             return None
