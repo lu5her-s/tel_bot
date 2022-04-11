@@ -43,7 +43,8 @@ def get_db(message, table_name):
                 return data
         except Exception as e:
             print(e)
-            return None
+            data = []
+            return data
         finally:
             conn.close()
     else:
@@ -106,9 +107,9 @@ def mtb29():
     if request.method == 'POST':
         payload = request.json
         
-        Reply_token = request.json['events'][0]['replyToken']
+        Reply_token = payload['events'][0]['replyToken']
         print(Reply_token)
-        message = request.json['events'][0]['message']['text']
+        message = payload['events'][0]['message']['text']
         m_list = message.split()
         data = get_db(message, 'mtb29_telephone')
         d_str = ''
