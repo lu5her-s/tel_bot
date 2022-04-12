@@ -85,14 +85,14 @@ def rta():
             print('Pass')
             # pass
         elif not data:
-            print('Not found : {}'.format(m_list[1]))
-            d_str = 'ไม่พบ : {}'.format(m_list[1])
+            print('Not found : {}'.format(m_list[0]))
+            d_str = 'ไม่พบ : {}'.format(m_list[0])
             ReplyMessage(Reply_token, d_str, channel_access_token['rta'])
         else:
             print(data)
             # d_str = ' '.join([str(elem) for elem in data])
             for d in data:
-                d_str += 'หน่วยงาน : {}\nเบอร์โทร ทบ : {}\nสส.ทหาร: {}\nองค์การ : {}\nสายตรง : {}\n'.format(d[1], d[2], d[3], d[4], d[5]) + '\n' + '-'*23 + '\n'
+                d_str += 'หน่วยงาน : {}\nเบอร์โทร ทบ : {}\nสส.ทหาร: {}\nองค์การ : {}\nสายตรง : {}\n'.format(d[0], d[1], d[2], d[3], d[4]) + '\n' + '-'*23 + '\n'
             ReplyMessage(Reply_token, d_str[:5000], channel_access_token['rta'])
         return request.json, 200
     
