@@ -83,7 +83,7 @@ def get_db(message, table_name):
 # line notify api
 def notify(date, checker, confirm, missing):
     url = 'https://notify-api.line.me/api/notify'
-    token = 'Ez9yTf3p2OPN3JYuhtqn1zlA9eznBqTJk2qDh4KDyri'
+    token = 'Egp2Tu5mtFIQInJS6LvBTp3CUvSy9V9mdUXFID2WSIU'
     
     headers = {
         "content-type": "application/x-www-form-urlencoded",
