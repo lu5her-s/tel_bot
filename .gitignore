@@ -2,6 +2,8 @@ __pycache__/
 mtb29/
 rta/
 tel_bot/
+files/
+guard.csv
 md29tel.csv
 mtb29.csv
 mtb29.csv.bk
