@@ -166,7 +166,11 @@ def mtb29():
         else:
             print(data)
             for d in data:
-                d_str += 'ชื่อ : {}\n'.format(d[0]) + 'ตำแหน่ง : {}\n'.format(d[1]) + 'หน่วย : {}\n'.format(d[2]) + 'เบอร์โทร : {}\n'.format(d[3]) + '-'*23 + '\n'
+                if d[4] == 'None':
+                    d_str += 'ชื่อ : {}\n'.format(d[0]) + 'ตำแหน่ง : {}\n'.format(d[1]) + 'หน่วย : {}\n'.format(d[2]) + 'เบอร์โทร : {}\n'.format(d[3]) + '-'*23 + '\n'
+                else:
+                    d_str += 'ชื่อ : {}\n'.format(d[0]) + 'ตำแหน่ง : {}\n'.format(d[1]) + 'หน่วย : {}\n'.format(d[2]) + 'เบอร์โทร : {}\n'.format(d[3]) + 'หมายเหตุ : {}\n'.format(d[4]) + '-'*23 + '\n'
+                    
             ReplyMessage(Reply_token, d_str[:5000], channel_access_token['mtb29'])
         return request.json, 200
     elif request.method == 'GET':
