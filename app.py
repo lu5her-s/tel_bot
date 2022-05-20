@@ -146,8 +146,8 @@ def rta():
             print('Pass')
             # pass
         elif not data:
-            print('Not found : {}'.format(m_list[0]))
-            d_str = 'ไม่พบ : {}'.format(m_list[0])
+            print('Not found : {}'.format(m_list[1]))
+            d_str = 'ไม่พบ : {}'.format(m_list[1])
             ReplyMessage(Reply_token, d_str, channel_access_token['rta'])
         else:
             print(data)
